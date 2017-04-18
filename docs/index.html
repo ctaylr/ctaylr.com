@@ -1,8 +1,67 @@
 <!doctype html />
 <head>
 	<title>it works!</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+	<style type="text/css">
+		html,body {
+			margin:0;
+			padding:0;
+		}
+		body {
+			
+			font-family:Raleway,sans-serif;
+		}
+		header {
+			padding:4em 10em;
+			margin-top:5em;
+			position:relative;
+		}
+
+
+		header:before {
+			content:'';
+			background:#eee;
+			position:absolute;
+			left:0;
+			top:0;
+			height:100%;
+			max-width:0;
+			width:100%;
+			overflow:hidden;
+			transition:max-width 1.4s;
+			transition-delay:0.5s;
+		}
+		
+
+		body.loaded header:before {
+			max-width:100%;
+		}
+
+		h1 {
+			font-size:200px;
+			line-height:0.8em;
+			margin:0;
+			position:relative;
+			z-index:1;
+		}
+		h2 {
+			font-size:50px;
+			text-transform:uppercase;
+			margin:0;
+			position:relative;
+			z-index:1;
+		}
+	</style>
 </head>
 <body>
-<h1>It works!</h1>
+		<header>
+				<h1>CHRIS<br/>TAYLOR</h1>
+				<h2>Web developer, Leigh on sea</h2>
+		</header>
+		<script type="text/javascript">
+			window.setTimeout(function(){
+				document.body.className = 'loaded';
+			},200);
+		</script>
 </body>
 </html>
