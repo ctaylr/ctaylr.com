@@ -16,7 +16,11 @@ var gulp = require('gulp'),
 // Server - listed on localhost:8080
 gulp.task('webserver', function() {
   connect.server({
-    livereload:true      
+    livereload: {
+		enable: true,
+		port: 8081 //c9.io
+	},
+    root:"docs"
   });
 });
 
